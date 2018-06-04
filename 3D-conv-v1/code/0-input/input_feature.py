@@ -227,7 +227,7 @@ if __name__ == '__main__':
 
     # The directory of the audio files separated by subject
     parser.add_argument('--audio_dir',
-                        default=os.path.expanduser('Audio'),
+                        default=os.path.expanduser('~/Audio'),
                         help='Location of sound files')
     args = parser.parse_args()
 
