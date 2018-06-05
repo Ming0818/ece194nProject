@@ -74,8 +74,8 @@ class AudioDataset():
         fs, signal = wav.read(sound_file_path)
 
         # Reading .wav file
-        import soundfile as sf
-        signal, fs = sf.read(sound_file_path)
+        #import soundfile as sf
+        #signal, fs = sf.read(sound_file_path)
 
         ###########################
         ### Feature Extraction ####
@@ -222,7 +222,7 @@ if __name__ == '__main__':
     # Example of each line: 0 subject/sound.wav
     parser.add_argument('--file_path',
                         default=os.path.expanduser(
-                            'file_path.txt'),
+                            'file_path1.txt'),
                         help='The file names for development phase')
 
     # The directory of the audio files separated by subject
