@@ -1,5 +1,7 @@
 # Siamese Architecture for face recognition
 
+from matplotlib import use
+use('Agg')
 import random
 import numpy as np
 import time
@@ -11,6 +13,7 @@ import scipy.io as sio
 from sklearn import *
 import matplotlib.pyplot as plt
 import os
+
 
 def Plot_PR_Fn(label,distance,phase):
 

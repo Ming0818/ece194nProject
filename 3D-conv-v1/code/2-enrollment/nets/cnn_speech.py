@@ -79,7 +79,7 @@ def PReLU(input, scope):
     return tf.nn.relu(input) + alphas * (input - abs(input)) * 0.5
 
 
-def speech_cnn(inputs, num_classes=1000,
+def speech_cnn(inputs, num_classes=50,
                        is_training=True,
                        dropout_keep_prob=0.5,
                        spatial_squeeze=True,

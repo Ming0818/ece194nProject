@@ -1,5 +1,8 @@
 # Siamese Architecture for face recognition
 
+from matplotlib import use
+use('Agg')
+
 import random
 import numpy as np
 import time
@@ -11,6 +14,7 @@ import scipy.io as sio
 from sklearn import *
 import matplotlib.pyplot as plt
 import os
+
 
 def Plot_HIST_Fn(label,distance, save_path, num_bins = 50):
 
