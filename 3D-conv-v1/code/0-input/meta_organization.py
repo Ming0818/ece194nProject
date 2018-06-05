@@ -23,26 +23,26 @@ file_path4 = ''
 file_path_test = ''
 
 #lists id folders
-x = os.listdir("Audio")
+x = os.listdir("/data/home/lucaslin/Audio")
 for i in x:
     voxid = str(i[5:])
     #lists id subfolders
-    y = os.listdir("Audio\\" + i)
+    y = os.listdir("/data/home/lucaslin/Audio/" + i)
     for ii in y:
         #lists wav files
-        z = os.listdir("Audio\\" + i + "\\" + ii)
+        z = os.listdir("/data/home/lucaslin/Audio/" + i + "/" + ii)
         for iii in z:
             splitting = random.random()
             if splitting<1/5:
-                file_path1 += voxid + " " + "\\".join((i,ii,iii)) + "\n"
+                file_path1 += voxid + " " + "/".join((i,ii,iii)) + "\n"
             elif splitting>1/5 and splitting<2/5:
-                file_path2 += voxid + " " + "\\".join((i,ii,iii)) + "\n"
+                file_path2 += voxid + " " + "/".join((i,ii,iii)) + "\n"
             elif splitting>2/5 and splitting<3/5:
-                file_path3 += voxid + " " + "\\".join((i,ii,iii)) + "\n"                
-            elif splitting>3/5 and splitting<3/5:
-                file_path4 += voxid + " " + "\\".join((i,ii,iii)) + "\n"
+                file_path3 += voxid + " " + "/".join((i,ii,iii)) + "\n"                
+            elif splitting>3/5 and splitting<4/5:
+                file_path4 += voxid + " " + "/".join((i,ii,iii)) + "\n"
             elif splitting>4/5:
-                file_path_test += voxid + " " + "\\".join((i,ii,iii)) + "\n"
+                file_path_test += voxid + " " + "/".join((i,ii,iii)) + "\n"
 
 wfile1 = open("file_path1.txt",'w')
 wfile1.write(file_path1)
